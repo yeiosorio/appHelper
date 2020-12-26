@@ -1,0 +1,7 @@
+{
+  "name": "appHelpers",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

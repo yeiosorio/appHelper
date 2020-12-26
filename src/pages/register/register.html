@@ -1,0 +1,90 @@
+<ion-header>
+	<ion-navbar>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+	<div>
+
+		<form #registerForm="ngForm">
+			<ion-row>
+				<ion-col>
+					<ion-list>
+						<ion-list-header>
+							Registro de cuenta
+						</ion-list-header>
+
+						<ion-item>
+							<ion-icon name="contacts" item-start></ion-icon>
+							<ion-input type="text" placeholder="Nombre" name="name" [(ngModel)]="dataRegister.name" required></ion-input>
+						</ion-item>
+
+						<ion-item>
+							<ion-icon name="person" item-start></ion-icon>
+							<ion-input type="text" placeholder="Apellido" name="last_name" [(ngModel)]="dataRegister.last_name" required></ion-input>
+						</ion-item>
+
+
+					</ion-list>
+
+					<ion-list>
+						<ion-item>
+							<ion-icon name="at" item-start></ion-icon>
+							<ion-input type="email" placeholder="email@ejemplo.com" name="email" [(ngModel)]="dataRegister.email" required></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-icon name="key" item-start></ion-icon>
+							<ion-input type="password" placeholder="Password" name="password" [(ngModel)]="dataRegister.password" required></ion-input>
+						</ion-item>
+					</ion-list>
+
+					<ion-list>
+						<ion-item>
+							<ion-icon name="navigate" item-start></ion-icon>
+							<ion-input type="text" placeholder="Address" name="address" [(ngModel)]="dataRegister.address" required></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-icon name="compass" item-start></ion-icon>
+							<ion-input type="text" placeholder="Postal Code" name="postalCode" [(ngModel)]="dataRegister.postalCode" required></ion-input>
+						</ion-item>
+
+						<ion-item>
+							<ion-icon name="phone-portrait" item-start></ion-icon>
+							<ion-input type="text" placeholder="+1 (555) 123-1234" name="phone" [(ngModel)]="dataRegister.phone" min="3"></ion-input>
+						</ion-item>
+					</ion-list>
+
+					<ion-list>
+						 <!-- <select (ionChange)="selectSubCate()" [(ngModel)]="catSelected" id="UserCategorieId" name="data[User][categorie_id]" required>
+							
+						</select> -->
+
+						<ion-item>
+								<ion-label>Select a Category</ion-label>
+								<!-- <ion-select [(ngModel)]="catSelected" interface="action-sheet"> -->
+								<ion-select interface="action-sheet">
+									<ion-option value="1">Errands</ion-option>
+									<ion-option value="2">Residence Cleaning</ion-option>
+									<ion-option value="3">Commercial Cleaning</ion-option>
+									<ion-option value="4">Handyman</ion-option>
+									<ion-option value="5">Pet Care</ion-option>
+								</ion-select>
+							  </ion-item>
+					</ion-list>
+
+
+
+				</ion-col>
+			</ion-row>
+
+			<ion-row>
+				<ion-col class="signup-col">
+					<button ion-button color="primary" class="submit-btn" block (click)="register()" [disabled]="!registerForm.form.valid">Sign up</button>
+
+				</ion-col>
+			</ion-row>
+
+		</form>
+
+	</div>
+</ion-content>

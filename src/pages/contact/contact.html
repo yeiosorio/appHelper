@@ -1,0 +1,79 @@
+<ion-header>
+
+	<ion-navbar color="primary">
+		<ion-buttons end>
+			<button small ion-button icon-only (click)="presentFilter()">
+				<ion-icon mode="md" md="md-create"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+	<div class="sectionHead" color="primary">
+		<div class="section-avatar">
+			<ion-avatar class="avatar">
+				<img class="img-avatar" src="assets/imgs/logo.svg">
+			</ion-avatar>
+			<h3 class="colorText"> {{helperName}} </h3>
+			<label class="colorText">Armenia</label>
+		</div>
+		<ion-row padding class="countTotal">
+			<ion-col col-4>
+				<h3 class="colorText"> {{countDataUser.totalTaskDone}} </h3>
+				<label class="colorText"> Done Task</label>
+			</ion-col>
+			<ion-col col-4>
+				<h3 class="colorText"> ${{countDataUser.totalEarn}} </h3>
+				<label class="colorText"> Earn Month</label>
+			</ion-col>
+			<ion-col col-4>
+				<h3 class="colorText"> {{countDataUser.totalCancel}} </h3>
+				<label class="colorText"> Cancel Task</label>
+			</ion-col>
+		</ion-row>
+	</div>
+
+
+	<ion-list no-lines>
+
+		<ion-item-group>
+			<ion-item-divider color="light"><h4>Notification</h4></ion-item-divider>
+			<ion-item>
+				<ion-label text-wrap><p>Reference site about Lorem Ipsum, giving information on its origins, as well.</p></ion-label>
+				<ion-icon name="notifications-outline" item-start></ion-icon>
+  				<ion-toggle checked="true" (ionChange)="presentToast()"></ion-toggle>
+			</ion-item>
+			
+		</ion-item-group>
+		<ion-item-group>
+			<ion-item-divider color="light"><h4>Available</h4></ion-item-divider>
+			<ion-item>
+				<ion-label text-wrap><p>Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum.</p></ion-label>
+				<ion-icon name="lock" item-start></ion-icon>
+  				<ion-toggle checked="available" [(ngModel)]="available" (ionChange)="presentToast()"></ion-toggle>
+			</ion-item>
+			
+		</ion-item-group>
+
+		<ion-item-group>
+			<ion-item-divider color="light"><h4>Privacity</h4></ion-item-divider>
+			<ion-item>
+				<ion-label text-wrap><p>As well as a random Lipsum generator.</p></ion-label>
+				<ion-icon name="lock" item-start></ion-icon>
+  				<ion-toggle checked="false" (ionChange)="presentToast()"></ion-toggle>
+			</ion-item>
+			
+		</ion-item-group>
+
+		<ion-item-group>
+			<ion-item-divider color="light"  class="btnlog">
+				<button  ion-button color="primary" class="logout" round outline small (click)="logout()">Log out</button>
+			</ion-item-divider>
+		</ion-item-group>
+
+	</ion-list>
+
+</ion-content>

@@ -1,0 +1,54 @@
+page-my-task-detail {
+    #mapDetail {
+        height: 68%;
+      }
+    
+      .status {
+        border-color: #1A6C82;
+        color: #1A6C82
+      }
+    
+      .pin {
+        text-align: center;
+      }
+      .clock {
+        text-align: center;
+      }
+      .textCategory {
+        border-bottom: 1px solid #cbcbcb;
+      }
+      .iconDetail {
+        font-size: 2.6em;
+      }
+      .itemcat {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      .cardText {
+        background-color: #f4f4f4;
+        border-radius: 10px 10px 10px 10px;
+        margin-top: -8px;
+      }
+      .textLocation {
+        font-weight: 400 !important;
+        font-size: 16px !important;
+        color: #353535!important;
+      }
+      .price {
+        color: #d21e44;
+        margin-top: 12px!important;
+        font-weight: 500;
+      }
+      .distance {
+        float: left;
+        margin-left: 10px;
+      }
+    
+      // .itemcat{
+      //     padding: 18px!important;
+      //     margin-top: 8px
+      // }
+      // .scroll-content{
+      //     margin-top: 350px !important;
+      // }
+}

@@ -1,0 +1,87 @@
+<!--
+  Generated template for the TaskDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+	<ion-navbar color="primary">
+		<ion-title>Task Detail</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+	<div id="map">
+	</div>
+
+	<ion-list class="textCategory" no-lines margin-bottom>
+		<ion-item class="itemcat">
+			<ion-avatar item-start>
+				<img class="img-icon" src="{{dataDetails.icon}}">
+			</ion-avatar>
+			<ion-label>
+				<h3 class="titleCat" text-wrap text-uppercase>{{dataDetails.subcat}}</h3>
+				<button *ngIf="dataDetails.status == 'Completed' " class="status" ion-button outline small>Completed</button>
+			</ion-label>
+
+		</ion-item>
+	</ion-list>
+
+	<ion-row [hidden]="notRoad == false">
+		<h3>Better get on a plane. There are no roads between</h3>
+	</ion-row>
+	
+	<!-- Ubicacion de la tarea -->
+	<ion-row padding>
+		<ion-col class="pin" col-6>
+			<ion-icon color="primary" class="iconDetail" ios="ios-pin" md="md-pin"></ion-icon>
+			<ion-label>
+				<p color="primary" class="textLocation" text-wrap>{{dataDetails.location}} - {{dataDetails.city}}</p>
+				<ion-icon class="distance" name="car"></ion-icon>
+				<p id="distance" text-wrap></p>
+				<ion-icon class="distance" name="walk"></ion-icon>
+				<p id="duration" class="duration" text-wrap></p>
+			</ion-label>
+		</ion-col>
+
+		<ion-col class="clock" col-6>
+			<!-- Horarios de la tarea -->
+			<ion-icon color="primary" class="iconDetail" name="clock"></ion-icon>
+			<ion-label>
+				<h3 color="primary" class="price" text-center text-wrap>$ {{dataDetails.price}}</h3>
+				<p color="primary" class="textLocation" text-center text-wrap>{{dataDetails.datetime}}</p>
+			</ion-label>
+		</ion-col>
+	</ion-row>
+	<!-- Descripcion de la tarea -->
+	<ion-row>
+		<ion-col>
+			<ion-card class="cardText">
+				<ion-card-content>
+					<p text-justify> {{dataDetails.jobdesc}} </p>
+				</ion-card-content>
+			</ion-card>
+		</ion-col>
+	</ion-row>
+	<!-- Botones para acciones -->
+	<ion-row padding>
+		<ion-col padding>
+			<button ion-button color="secondary" class="submit-btn-1" round block (click)="acceptTaskConfirm(requestId, uid, 0)"
+			 *ngIf="dataDetails.status == null">Accept Task</button>
+			<button ion-button color="secondary" class="submit-btn-2" round block (click)="updateStatus(requestId, 'In the route')"
+			 *ngIf="dataDetails.status == 'Accepted' ">In the Route</button>
+			<button ion-button color="secondary" class="submit-btn-3" round block (click)="updateStatus(requestId, 'In proccess')"
+			 *ngIf="dataDetails.status == 'In the route' ">In Proccess</button>
+			<button ion-button color="primary" class="submit-btn-4" round block *ngIf="dataDetails.status == 'In the route' ">Validate
+				Client</button>
+			<button ion-button color="secondary" class="submit-btn-5" round block (click)="updateStatus(requestId, 'Completed')"
+			 *ngIf="dataDetails.status == 'In proccess' ">Complete Task</button>
+			<button ion-button color="primary" class="submit-btn-6" round block (click)="acceptTaskConfirm(requestId, uid, 1)"
+			 *ngIf="dataDetails.status == 'Accepted' ">Cancell Task</button>
+		</ion-col>
+	</ion-row>
+
+</ion-content>

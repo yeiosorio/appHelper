@@ -1,0 +1,42 @@
+page-contact {
+    ion-toolbar{
+        // min-height: 262px;
+    }
+
+    .avatar{
+        border-radius: 100%;
+        width: 90px;
+        height: 90px;
+        text-align: center;
+        margin: auto;
+        background: #ffffff;
+        padding: 14px;
+        margin-top: 20px;
+    }
+
+    .section-avatar{
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .sectionHead{
+        background-color: #e44d66;
+        margin-top: -20px;
+    }
+    .img-avatar{
+        margin-top: 6px;
+        
+    }
+    .colorText{
+       color: white;
+    }
+    .countTotal{
+        text-align: center;
+        padding-top : 22px!important;
+        padding-bottom : 22px!important;
+    }
+    .btnlog{
+        text-align: center;
+    }
+
+}

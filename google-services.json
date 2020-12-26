@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "565144117859",
+    "firebase_url": "https://helpers-cd404.firebaseio.com",
+    "project_id": "helpers-cd404",
+    "storage_bucket": "helpers-cd404.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565144117859:android:824705d7c0793271",
+        "android_client_info": {
+          "package_name": "io.helpers.gl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565144117859-2cik5ecf581d7sbgpufkgopd6mv4qu1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBADPvYzIAHFBbs6fzPvTN5eoQYLLB5970"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

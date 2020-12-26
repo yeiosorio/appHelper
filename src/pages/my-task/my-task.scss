@@ -1,0 +1,61 @@
+page-my-task {
+    .status{
+        font-size: x-small;
+        margin: -4px 0px 0px 0px!important;
+        // float: left;
+        border-color: #19a267;
+        color: #19a267
+    }
+    .price{
+        width: 31%;
+        float: left;
+        font-size: larger;
+        
+    }
+    .date{
+        margin-top: 6px;
+    }
+    .titleCate{
+        color: #1A6C82;
+        font-size: 1.6rem;
+        width: 78%;
+
+    }
+    .itemTask{
+
+    }
+    .check-icon{
+        color: #19a267;
+        font-size: 1.6em;
+    }
+    .check-close{
+        color: #f32727;
+        font-size: 1.6em;
+    }
+    .img-icon{
+        width: 54px!important;
+        height: 54px!important;
+    }
+    .check-accept-task{
+        float: right;
+        border-radius: 100%;
+        padding: 6px;
+        font-size: x-large;
+        margin-top: -12px;
+        border: 1px solid #19a267;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+    .check-cancel-task{
+        float: right;
+        border-radius: 100%;
+        padding: 6px;
+        font-size: x-large;
+        margin-top: -12px;
+        border: 1px solid #f32727;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+}

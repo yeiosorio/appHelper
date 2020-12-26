@@ -1,0 +1,63 @@
+<!--
+  Generated template for the ListTasksPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>list Tasks</ion-title>
+	</ion-navbar>
+
+	<ion-toolbar>
+		<ion-searchbar autocomplete mode="ios" animated showCancelButton cancelButtonText="Cancel"></ion-searchbar>
+		<!-- <ion-buttons end>
+			<button small ion-button icon-only (click)="presentFilter()">
+				<ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+			</button>
+		</ion-buttons> -->
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+		<ion-refresher (ionRefresh)="doRefresh($event)">
+			<ion-refresher-content
+					pullingIcon="arrow-dropdown"
+					pullingText="Pull to refresh"
+					refreshingSpinner="circles"
+					refreshingText="Refreshing...">
+			</ion-refresher-content>
+		</ion-refresher>
+
+	<ion-segment padding [(ngModel)]="segment" (ionChange)="segmentChanged()">
+		<ion-segment-button value="recients">
+			Recients
+		</ion-segment-button>
+		<ion-segment-button value="categories">
+			Subcategories
+		</ion-segment-button>
+	</ion-segment>
+
+	<ion-list>
+		<ion-item class="itemTask" *ngFor="let item of listTask; let i = index">
+			<ion-avatar item-start>
+				<img class="img-icon" src="{{item.icon}}" (click)="taskDetail(item.idrequest)">
+			</ion-avatar>
+			<ion-label>
+				<p class="titleCate" (click)="taskDetail(item.idrequest)">{{item.subcat}}</p>
+				<h3 class="price" (click)="taskDetail(item.idrequest)">$ {{item.price}}</h3>
+				<button class="status" ion-button item-end outline small (click)="taskDetail(item.idrequest)">Hours: {{item.hours}}</button>
+
+				<div class="check-accept-task" [hidden]="item.statusTake == true" (click)="acceptTaskConfirm(item.idrequest, item.helperid, item.statusTake, i);">
+					<ion-icon class="check-icon" name="checkmark"></ion-icon>
+				</div>
+				<div class="check-cancel-task" [hidden]="item.statusTake == false" (click)="acceptTaskConfirm(item.idrequest, item.helperid, item.statusTake, i);">
+					<ion-icon class="check-close" name="close"></ion-icon>
+				</div>
+				<p class="date" (click)="taskDetail(item.idrequest)">{{item.datetime}}</p>
+			</ion-label>
+		</ion-item>
+
+	</ion-list>
+</ion-content>
